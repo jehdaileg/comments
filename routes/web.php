@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\TestBroadCast;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
+    broadcast(new TestBroadCast);
+
     return Inertia::render('Index');
 });
