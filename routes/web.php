@@ -1,7 +1,9 @@
 <?php
 
-use App\Events\TestBroadCast;
+use App\Models\Post;
 use Inertia\Inertia;
+use App\Events\TestBroadCast;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +17,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-
-    broadcast(new TestBroadCast);
-
-    return Inertia::render('Index');
-});
+Route::resource('/', PostController::class);

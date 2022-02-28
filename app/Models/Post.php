@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Comment;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
 
 class Post extends Model
 {
@@ -20,4 +21,11 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+ /*  public static function booted()
+   {
+       static::creating(function($post){
+        $post->created_at = $post->created_at->toFormattedDateString();
+       });
+   } */
 }
