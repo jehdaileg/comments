@@ -17,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', PostController::class);
+Route::get('/', function(){
+    return Inertia::render('Home');
+})->name('home');
+
+Route::resource('/posts', PostController::class);
