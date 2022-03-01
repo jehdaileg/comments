@@ -28,6 +28,11 @@
   "resolved" "https://registry.npmjs.org/@babel/parser/-/parser-7.17.3.tgz"
   "version" "7.17.3"
 
+"@heroicons/vue@^1.0.5":
+  "integrity" "sha512-idWtp20Fjr7mqnD7EdGDUDi83oWHnx3SwyuQY6GZyF33OApzpBOLxz7xa4t6rPOddGz9tI5RGnndLk+ake7ijQ=="
+  "resolved" "https://registry.npmjs.org/@heroicons/vue/-/vue-1.0.5.tgz"
+  "version" "1.0.5"
+
 "@inertiajs/inertia-vue3@^0.6.0":
   "integrity" "sha512-qhPBtd/G0VS7vVVbYw1rrqKB6JqRusxqt+5ec2GLmK6t7fTlBBnZ3KsakmGZLSM1m1OGkNcfn4ifmCk3zfA8RQ=="
   "resolved" "https://registry.npmjs.org/@inertiajs/inertia-vue3/-/inertia-vue3-0.6.0.tgz"
@@ -89,6 +94,13 @@
   "integrity" "sha512-3C0s45VOwIFEDU+2ownJOpb0zD5fnjXWaHVOLID2R1mYOlAx3doNBFnNbVjaZvpke/L7IdPJXjpyYpXZToDKig=="
   "resolved" "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-2.2.2.tgz"
   "version" "2.2.2"
+
+"@vue-hero-icons/outline@^1.7.2":
+  "integrity" "sha512-mgMpncarjZHXY1K2tyjbYHf53yQG9amroDR9t2iH/umpsN8+f8RNcTy1m131EZ8WBCm8MpF97XpXPV129rvtVg=="
+  "resolved" "https://registry.npmjs.org/@vue-hero-icons/outline/-/outline-1.7.2.tgz"
+  "version" "1.7.2"
+  dependencies:
+    "babel-helper-vue-jsx-merge-props" "^2.0.3"
 
 "@vue/compiler-core@3.2.31":
   "integrity" "sha512-aKno00qoA4o+V/kR6i/pE+aP+esng5siNAVQ422TkBNM6qA4veXiZbSe8OTXHXquEi/f6Akc+nLfB4JGfe4/WQ=="
@@ -251,6 +263,11 @@
   "version" "0.25.0"
   dependencies:
     "follow-redirects" "^1.14.7"
+
+"babel-helper-vue-jsx-merge-props@^2.0.3":
+  "integrity" "sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg=="
+  "resolved" "https://registry.npmjs.org/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-2.0.3.tgz"
+  "version" "2.0.3"
 
 "binary-extensions@^2.0.0":
   "integrity" "sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA=="
@@ -1077,7 +1094,7 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
-"vue@^3.0.0", "vue@^3.2.25", "vue@^3.2.31", "vue@3.2.31":
+"vue@^3.0.0", "vue@^3.2.25", "vue@^3.2.31", "vue@>= 3", "vue@3.2.31":
   "integrity" "sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.31.tgz"
   "version" "3.2.31"

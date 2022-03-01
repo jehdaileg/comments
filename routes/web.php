@@ -1,10 +1,13 @@
 <?php
 
 use App\Models\Post;
+use App\Models\User;
 use Inertia\Inertia;
 use App\Events\TestBroadCast;
-use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +20,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Just for Test */
+
+$user = User::query()->firstOrCreate([
+    'email' => 'example@gmail.com',
+    'password' => '12345678',
+    'name' => 'nameExample'
+]);
+
+Auth::login($user);
+
+
+
 Route::get('/', function(){
     return Inertia::render('Home');
 })->name('home');
 
 Route::resource('/posts', PostController::class);
+
+Route::post('postComment', [PostCommentController::class, 'store'])->name('post.comment');

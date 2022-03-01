@@ -16,7 +16,11 @@
                             >
                                 <span
                                     class="text-gray-400 pb-2 mb-2 border-b-2 border-gray-700"
-                                    >{{ new Date(post.created_at).toLocaleDateString("en-US") }}</span
+                                    >{{
+                                        new Date(
+                                            post.created_at
+                                        ).toLocaleDateString("en-US")
+                                    }}</span
                                 >
                                 <span
                                     class="font-medium text-lg leading-none text-gray-300 title-font"
@@ -54,7 +58,9 @@
                                 <div class="flex items-center flex-wrap">
                                     <a
                                         class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0"
-                                        ><Link :href="`/posts/${post.id}`">Read More</Link>
+                                        ><Link :href="`/posts/${post.id}`"
+                                            >Read More</Link
+                                        >
                                         <svg
                                             class="w-4 h-4 ml-2"
                                             viewBox="0 0 24 24"
@@ -111,7 +117,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -119,14 +124,12 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch} from "vue";
+import { onMounted, ref, watch } from "vue";
 import { Link, Head } from "@inertiajs/inertia-vue3";
 
 const props = defineProps({
     posts: Array,
 });
-
-
 
 /* Just for test
 console.log(props.posts[0].comments[1].body_comment);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Models\Comment;
 use App\Models\Post;
 use Inertia\Inertia;
 
@@ -17,10 +18,13 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Post::query()->with('user', 'comments')->withCount('comments')->latest()->get();
+        $posts = Post::query()->with('user', 'comments')
+            ->withCount('comments')
+            ->latest()
+            ->get();
 
-       // dd(json_decode($posts));
-        return Inertia::render('Index', [
+
+        return Inertia::render('Posts/Index', [
             'posts' => $posts
         ]);
     }
@@ -58,7 +62,13 @@ class PostController extends Controller
     {
         //
 
-        return 'okay';
+        return Inertia::render('Posts/Show', [
+            'post' => $post->load('user')
+                           ->loadCount('comments'),
+
+            'comments' => Comment::query()->with('user')->whereBelongsTo($post)->get()
+
+        ]);
     }
 
     /**
