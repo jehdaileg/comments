@@ -46,6 +46,7 @@
 
                             <text-area-comment
                                 :open="open"
+                                :post_id= post.id
                                 @close="closeCommentInput()"
                             ></text-area-comment>
 
@@ -75,6 +76,11 @@ import { ChatAltIcon } from "@heroicons/vue/outline";
 const props = defineProps({
     post: Object,
     comments: Array,
+});
+
+defineExpose({
+    post: props.post,
+
 });
 
 const open = ref(false);

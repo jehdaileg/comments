@@ -66,7 +66,7 @@ class PostController extends Controller
             'post' => $post->load('user')
                            ->loadCount('comments'),
 
-            'comments' => Comment::query()->with('user')->whereBelongsTo($post)->get()
+            'comments' => Comment::query()->with('user')->whereBelongsTo($post)->latest()->get()
 
         ]);
     }

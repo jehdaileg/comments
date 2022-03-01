@@ -28,7 +28,7 @@ $user = User::query()->firstOrCreate([
     'name' => 'nameExample'
 ]);
 
-Auth::login($user);
+Auth::login($user, remember:true);
 
 
 
@@ -38,4 +38,4 @@ Route::get('/', function(){
 
 Route::resource('/posts', PostController::class);
 
-Route::post('postComment', [PostCommentController::class, 'store'])->name('post.comment');
+Route::post('postComment/{post}', [PostCommentController::class, 'store'])->name('post.comment');

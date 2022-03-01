@@ -16,7 +16,7 @@
                 >
                     <div class="row sm:flex">
 
-                        <form @submit.prevent="form.post('/postComment')">
+                        <form @submit.prevent="form.post(`/postComment/${post_id}`); emit('close');">
                             <label for="comment">Your comment:</label>
                             <textarea
                                 v-model="form.body_comment"
@@ -47,7 +47,13 @@ const form = useForm({
 
 const props = defineProps({
     open: Boolean,
+    post_id: Number,
+
 });
 
 const emit = defineEmits(["close"]);
+
+function sendComment() {
+    console.log(props.post_id);
+}
 </script>

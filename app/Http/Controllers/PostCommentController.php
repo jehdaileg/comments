@@ -12,10 +12,12 @@ class PostCommentController extends Controller
 
     public function store(Post $post)
     {
+
         $comment = request()->validate([
             'body_comment' => 'required',
-            'user_id' => Auth::user()->id
         ], request()->all());
+
+        $comment['user_id'] = Auth::user()->id;
 
         $post->comments()->create($comment);
 
