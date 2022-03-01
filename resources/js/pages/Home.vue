@@ -25,10 +25,14 @@
                 </div>
                 <div class="hidden lg:block">
                     <ul class="inline-flex">
-                        <li><a class="px-4 font-bold" href="/">Home</a></li>
-                        <li><Link :href="/posts" class="px-4 hover:text-gray-800">Posts</Link></li>
+                        <li><a class="px-4 font-bold hover:text-white cursor-pointer" href="/">Home</a></li>
                         <li>
-                            <a class="px-4 hover:text-gray-800" href="#"
+                            <Link href="/posts" class="px-4 hover:text-white cursor-pointer"
+                                >Posts</Link
+                            >
+                        </li>
+                        <li>
+                            <a class="px-4 hover:text-white cursor-pointer" href="#"
                                 >Contact</a
                             >
                         </li>
@@ -62,15 +66,15 @@
         <!-- Main SECTION -->
 
         <section class="container mx-auto px-6 p-10">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-8">
                 Features
             </h2>
             <div class="flex items-center flex-wrap mb-20">
                 <div class="w-full md:w-1/2">
-                    <h4 class="text-3xl text-gray-800 font-bold mb-3">
+                    <h4 class="text-3xl text-white font-bold mb-3">
                         Exercise Metric
                     </h4>
-                    <p class="text-gray-600 mb-8">
+                    <p class="text-white mb-8">
                         Our Smart Health Monitoring Wristwatch is able to
                         capture you vitals while you exercise. You can create
                         different category of exercises and can track your
@@ -78,19 +82,25 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <img src="assets/health.svg" alt="Monitoring" />
+                    <img
+                        src="/assets/images_static/health.png"
+                        alt="Monitoring"
+                    />
                 </div>
             </div>
 
             <div class="flex items-center flex-wrap mb-20">
                 <div class="w-full md:w-1/2">
-                    <img src="assets/report.svg" alt="Reporting" />
+                    <img
+                        src="/assets/images_static/report.png"
+                        alt="Reporting"
+                    />
                 </div>
                 <div class="w-full md:w-1/2 pl-10">
-                    <h4 class="text-3xl text-gray-800 font-bold mb-3">
+                    <h4 class="text-3xl text-white font-bold mb-3">
                         Reporting
                     </h4>
-                    <p class="text-gray-600 mb-8">
+                    <p class="text-white mb-8">
                         Our Smart Health Monitoring Wristwatch can generate a
                         comprehensive report on your vitals depending on your
                         settings either daily, weekly, monthly, quarterly or
@@ -101,10 +111,8 @@
 
             <div class="flex items-center flex-wrap mb-20">
                 <div class="w-full md:w-1/2">
-                    <h4 class="text-3xl text-gray-800 font-bold mb-3">
-                        Syncing
-                    </h4>
-                    <p class="text-gray-600 mb-8">
+                    <h4 class="text-3xl text-white font-bold mb-3">Syncing</h4>
+                    <p class="text-white mb-8">
                         Our Smart Health Monitoring Wristwatch allows you to
                         sync data across all your mobile devices whether iOS,
                         Android or Windows OS and also to your laptop whether
@@ -112,7 +120,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <img src="assets/sync.svg" alt="Syncing" />
+                    <img src="assets/images_static/sync.png" alt="Syncing" />
                 </div>
             </div>
         </section>
@@ -176,7 +184,7 @@
                     Get yourself the Smart Health Monitoring Wristwatch!
                 </h3>
                 <button
-                    class="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider"
+                    class="bg-white text-black font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider"
                 >
                     Pre Order
                 </button>
@@ -184,7 +192,7 @@
         </section>
 
         <!-- FOOTER Section -->
-        <footer class="bg-gray-100">
+        <footer class="bg-gray-100 text-black">
             <div class="container mx-auto px-6 pt-10 pb-6">
                 <div class="flex flex-wrap">
                     <div class="w-full md:w-1/4 text-center md:text-left">

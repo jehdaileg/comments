@@ -25,6 +25,7 @@
         "@inertiajs/progress": "^0.2.7",
         "@tailwindcss/forms": "^0.4.0",
         "@vitejs/plugin-vue": "^2.2.2",
+        "autoprefixer": "^10.4.2",
         "moment": "^2.29.1",
         "vue": "^3.2.31"
     }
