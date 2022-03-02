@@ -46,7 +46,7 @@
 
                             <text-area-comment
                                 :open="open"
-                                :post_id= post.id
+                                :post_id="post.id"
                                 @close="closeCommentInput()"
                             ></text-area-comment>
 
@@ -80,7 +80,6 @@ const props = defineProps({
 
 defineExpose({
     post: props.post,
-
 });
 
 const open = ref(false);
@@ -93,4 +92,8 @@ function closeCommentInput() {
     open.value = false;
 }
 console.log(props.comments);
+
+Echo.channel("publish-comment-channel").listen(".publishCommentEvent", (e) => {
+    console.log(e.user);
+});
 </script>

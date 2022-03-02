@@ -33,6 +33,9 @@ Auth::login($user, remember:true);
 
 
 Route::get('/', function(){
+
+    //broadcast(new TestBroadCast);
+
     return Inertia::render('Home');
 })->name('home');
 
