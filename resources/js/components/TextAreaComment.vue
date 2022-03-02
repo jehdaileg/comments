@@ -16,7 +16,7 @@
                 >
                     <div class="row sm:flex">
 
-                        <form @submit.prevent="form.post(`/postComment/${post_id}`); emit('close');">
+                        <form @submit.prevent="form.post(`/postComment/${post_id}`); emit('close'); printToastMessage();">
                             <label for="comment">Your comment:</label>
                             <textarea
                                 v-model="form.body_comment"
@@ -40,6 +40,9 @@
 <script setup>
 import { XIcon } from "@heroicons/vue/outline";
 import { useForm } from "@inertiajs/inertia-vue3";
+import { useToast } from "vue-toastification";
+
+const toast = useToast();
 
 const form = useForm({
     body_comment: null,
@@ -55,5 +58,17 @@ const emit = defineEmits(["close"]);
 
 function sendComment() {
     console.log(props.post_id);
+};
+
+const printToastMessage = () => {
+
+    toast.success("Comment Posted Successfully 😃😃😄", {
+        timeout: 2000,
+    });
+};
+
+const testIt = () => {
+    console.log('Just for test');
 }
+
 </script>

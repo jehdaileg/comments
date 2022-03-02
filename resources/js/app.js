@@ -4,6 +4,9 @@ import {
     plugin as InertiaPlugin,
 } from "@inertiajs/inertia-vue3";
 
+import Toast  from "vue-toastification";
+import "vue-toastification/dist/index.css";
+
 import 'tailwindcss/tailwind.css';
 
 import AppLayout from "./layouts/AppLayout.vue";
@@ -58,4 +61,7 @@ createApp({
         }),
 })
     .use(InertiaPlugin)
+    .use(Toast, {
+
+    })
     .mount(app);

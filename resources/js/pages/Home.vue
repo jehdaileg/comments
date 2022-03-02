@@ -6,7 +6,7 @@
             <div
                 class="container mx-auto px-6 py-2 flex justify-between items-center"
             >
-                <a class="font-bold text-2xl lg:text-4xl" href="#"> SHMW </a>
+                <a class="font-bold text-2xl lg:text-2xl" href="#"> Boost Jehd</a>
                 <div class="block lg:hidden">
                     <button
                         class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"

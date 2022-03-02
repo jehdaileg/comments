@@ -73,6 +73,7 @@ import { ref } from "vue";
 import TextAreaComment from "../../components/TextAreaComment.vue";
 import { ChatAltIcon } from "@heroicons/vue/outline";
 
+
 const props = defineProps({
     post: Object,
     comments: Array,
@@ -90,10 +91,14 @@ function displayCommentInput() {
 
 function closeCommentInput() {
     open.value = false;
+
 }
 console.log(props.comments);
 
 Echo.channel("publish-comment-channel").listen(".publishCommentEvent", (e) => {
-    console.log(e.user);
+    console.log(e.comment);
+
+    props.comments.push(e.comment);
+
 });
 </script>

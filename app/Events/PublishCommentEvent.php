@@ -41,6 +41,7 @@ class PublishCommentEvent implements ShouldBroadcast
         return "publishCommentEvent";
     }
 
+
     public function broadcastWith()
     {
         return [
@@ -48,4 +49,6 @@ class PublishCommentEvent implements ShouldBroadcast
             'user' => $this->user,
         ];
     }
+
+
 }
