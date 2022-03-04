@@ -4,6 +4,8 @@ import {
     plugin as InertiaPlugin,
 } from "@inertiajs/inertia-vue3";
 
+import "./plugins/Chart.js";
+
 import Toast  from "vue-toastification";
 import "vue-toastification/dist/index.css";
 

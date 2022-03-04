@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostCommentController;
+use App\Http\Controllers\StatPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,5 @@ Route::get('/', function(){
 Route::resource('/posts', PostController::class);
 
 Route::post('postComment/{post}', [PostCommentController::class, 'store'])->name('post.comment');
+
+Route::get('/statPost', StatPostController::class)->name('stats.posts');

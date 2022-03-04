@@ -31,6 +31,10 @@
                                 >Posts</Link
                             >
                         </li>
+
+                        <li>
+                            <Link href="/statPost" class="px-4 hover:text-white cursor-pointer">Statistics</Link>
+                        </li>
                         <li>
                             <a class="px-4 hover:text-white cursor-pointer" href="#"
                                 >Contact</a
