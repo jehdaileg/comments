@@ -13,6 +13,8 @@ import { ref, computed } from "vue";
 
 import { LineChart } from "vue-chart-3";
 
+
+
 import {
   Chart,
   ArcElement,
@@ -40,7 +42,7 @@ import {
   Tooltip,
 } from "chart.js";
 
-Chart.register(LineController, PointElement, LineElement);
+Chart.register(LineController, PointElement, LineElement, CategoryScale, LinearScale);
 
 const dataValues = ref([10, 15, 17, 11, 4, 8, 21]);
 
