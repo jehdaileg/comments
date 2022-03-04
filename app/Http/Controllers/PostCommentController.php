@@ -26,7 +26,7 @@ class PostCommentController extends Controller
         $comment_saved = $post->comments()->create($comment);
 
         /* call the event to pass comments datas in broadcast */
-        broadcast(new PublishCommentEvent($comment_saved, $user_author));
+        broadcast(new PublishCommentEvent($comment_saved, $user_author))->toOthers();
 
         return back();
     }

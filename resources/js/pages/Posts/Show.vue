@@ -56,7 +56,7 @@
                                     v-for="comment in comments"
                                     :key="comment.id"
                                 >
-                                    <span>{{ comment.user.name }}</span>
+                                    <span>{{ comment.user?.name }}</span>
                                     {{ comment.body_comment }}
                                 </li>
                             </ul>
@@ -73,7 +73,6 @@ import { ref } from "vue";
 import TextAreaComment from "../../components/TextAreaComment.vue";
 import { ChatAltIcon } from "@heroicons/vue/outline";
 
-
 const props = defineProps({
     post: Object,
     comments: Array,
@@ -83,6 +82,8 @@ defineExpose({
     post: props.post,
 });
 
+const comments = ref(props.comments);
+
 const open = ref(false);
 
 function displayCommentInput() {
@@ -91,14 +92,13 @@ function displayCommentInput() {
 
 function closeCommentInput() {
     open.value = false;
-
 }
 console.log(props.comments);
 
 Echo.channel("publish-comment-channel").listen(".publishCommentEvent", (e) => {
     console.log(e.comment);
 
-    props.comments.push(e.comment);
-
+    // props.comments = [...props.comments, e.comment]
+    comments.value.unshift(e.comment);
 });
 </script>

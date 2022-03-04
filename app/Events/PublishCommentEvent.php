@@ -45,8 +45,8 @@ class PublishCommentEvent implements ShouldBroadcast
     public function broadcastWith()
     {
         return [
-            'comment' => $this->comment,
-            'user' => $this->user,
+            'comment' => $this->comment->load('user'),
+
         ];
     }
 
