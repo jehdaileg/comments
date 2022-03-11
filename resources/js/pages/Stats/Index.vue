@@ -1,9 +1,9 @@
 <template>
     <div>
 
-        <h5 class="text-pink-200">Here Posts Statistics</h5>
+        <h5 class="text-pink-300">Stats Posts</h5>
 
-        <div class="flex justify-center space-x-2 items-center mx-auto">
+        <div class="flex justify-center space-x-2 items-center mx-auto text-white">
             <LineChartComponent />
         </div>
 
