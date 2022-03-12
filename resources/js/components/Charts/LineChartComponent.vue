@@ -50,6 +50,10 @@ Chart.register(
     LinearScale
 );
 
+const props = defineProps({
+    posts: Array
+});
+
 const dataValues = ref([10, 15, 17, 11, 4, 8, 21]);
 
 const data = computed(() => ({

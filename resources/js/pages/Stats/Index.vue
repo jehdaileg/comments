@@ -4,7 +4,7 @@
         <h5 class="text-pink-300">Stats Posts</h5>
 
         <div class="flex justify-center space-x-2 items-center mx-auto text-white">
-            <LineChartComponent />
+            <LineChartComponent :posts="posts" />
         </div>
 
         <div class="mt-6">
@@ -19,5 +19,9 @@
 import LineChartComponent from "../../components/Charts/LineChartComponent.vue";
 
 import FooterComponent from "../../components/FooterComponent.vue";
+
+const props = defineProps({
+    posts: Array
+});
 
 </script>
