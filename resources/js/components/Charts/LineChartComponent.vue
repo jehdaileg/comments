@@ -51,8 +51,14 @@ Chart.register(
 );
 
 const props = defineProps({
-    posts: Array
+    posts: Array,
 });
+
+
+console.log(posts);
+
+console.tab(posts);
+
 
 const dataValues = ref([10, 15, 17, 11, 4, 8, 21]);
 
