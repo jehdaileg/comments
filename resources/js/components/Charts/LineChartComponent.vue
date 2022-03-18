@@ -55,9 +55,9 @@ const props = defineProps({
 });
 
 
-console.log(posts);
+console.log(props.posts);
 
-console.tab(posts);
+console.tab(props.posts);
 
 
 const dataValues = ref([10, 15, 17, 11, 4, 8, 21]);
