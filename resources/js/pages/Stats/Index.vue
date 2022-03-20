@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h5 class="text-pink-300">Stats Posts</h5>
+        <h5 class="text-pink-300">Posts Analyzis</h5>
 
         <div
             class="flex justify-center space-x-2 items-center mx-auto text-white"
