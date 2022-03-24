@@ -69,9 +69,14 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import TextAreaComment from "../../components/TextAreaComment.vue";
 import { ChatAltIcon } from "@heroicons/vue/outline";
+import axios from "axios";
+
+onMounted(function(){
+    axios.put('')
+});
 
 const props = defineProps({
     post: Object,

@@ -54,10 +54,12 @@ const props = defineProps({
     posts: Array,
 });
 
-const dataValues = ref([10, 15, 17, 11, 4, 8, 21]);
+console.table(props.posts.map(({id, views}) => ({id, views})));
+
+const dataValues = computed(() => props.posts.map(post => post.views));
 
 const data = computed(() => ({
-    labels: ["Jan", "Feb", "March", "April", "May", "June", "July"],
+    labels: props.posts.map(post => post.id),
 
     datasets: [
         {
