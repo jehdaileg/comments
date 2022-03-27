@@ -54,6 +54,8 @@ const props = defineProps({
     posts: Array,
 });
 
+//get specific datas from server
+
 console.table(props.posts.map(({id, views}) => ({id, views})));
 
 const dataValues = computed(() => props.posts.map(post => post.views));
